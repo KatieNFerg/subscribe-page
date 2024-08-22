@@ -14,8 +14,16 @@
         <input type="email" name="Email" placeholder="Your email id" required>
         <button type="submit"><img src="send-icon.jpg" width="30px"></button>
     </form>
+    <span>Thank you for subscribing</span>
 </div>
-
+var ExcelApp = new ActiveXObject("Excel.Application");
+var ExcelSheet = new ActiveXObject("Excel.Sheet");
+// a text is stored in the first cell  
+ExcelSheet.ActiveSheet.Cells(1,1).Value = "Text01";
+// the sheet is saved
+ExcelSheet.SaveAs("D:\\TEST.XLS");
+// close Excel with the Quit() method of the Application object 
+ExcelSheet.Application.Quit();
 
     </body>
 </html>
